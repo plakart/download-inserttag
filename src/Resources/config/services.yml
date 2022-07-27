@@ -1,0 +1,7 @@
+services:
+  _defaults:
+    autoconfigure: true
+
+  Plakart\DownloadInsertTagBundle\EventListener\ReplaceInsertTagsListener:
+    tags:
+      - { name: contao.hook, hook: replaceInsertTags, method: onReplaceInsertTags, priority: 0 }
