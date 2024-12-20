@@ -30,7 +30,6 @@ class DownloadInsertTag
 {
     public function __invoke(ResolvedInsertTag $insertTag): InsertTagResult
     {
-        dump('hallo');
         if (null === $insertTag->getParameters()->get(0)) {
             throw new InvalidInsertTagException('Missing parameters for insert tag.');
         }
