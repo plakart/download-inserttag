@@ -11,15 +11,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Plakart\DownloadInsertTagBundle\Helpers;
+namespace Plakart\DownloadInsertTagBundle\Helper;
 
 use Contao\Controller;
 
-class SendFile {
-    public static function download($param)
+class SendFileToBrowser
+{
+    public static function download($url):void
     {
-        if($param) {
-            Controller::sendFileToBrowser($param);
+        if($url) {
+            Controller::sendFileToBrowser($url);
         }
     }
 }
